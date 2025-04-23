@@ -1,0 +1,8 @@
+Use sakila;
+
+select * 
+from payment
+where amount > (
+	select avg(amount)
+	from payment)
+order by amount desc
