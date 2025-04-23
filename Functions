@@ -1,0 +1,10 @@
+use sakila;
+
+select	
+	max(amount) as Maior,
+    min(amount) as Menor,
+    avg(amount) as 'Média de Valores',
+    sum(amount) as 'Total de vendas',
+    count(amount) as 'Numero de Vendas'
+from payment
+where staff_id = 2
