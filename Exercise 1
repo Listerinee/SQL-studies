@@ -1,13 +1,15 @@
 Use sakila;
 
 select 
-	cus.customer_id as ID,
+    cus.customer_id as ID,
     cus.first_name as Nome,
     cus.last_name as Sobrenome,
-	SUM(amount) as Total
+    SUM(amount) as Total,
+    count(amount) as Compras
     
 from payment
 join customer cus using(customer_id)
 
 group by customer_id
+having Total >=150 and Compras >=30
 order by total desc
