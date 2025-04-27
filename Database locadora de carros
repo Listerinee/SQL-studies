@@ -25,3 +25,27 @@ create table cliente (
     primary key(id)
 
 );
+
+INSERT INTO cliente (nome, sobrenome, endereco)
+VALUES 
+	('Vinicius', 'Ferreira', 'Rua 3'),
+	('Maria', 'Souza', 'Rua 4'),
+	('Ana', 'Katarina', 'Rua 5'),
+	('André', 'Glasses', 'Rua 6');
+    
+INSERT INTO marcas(nome_marca, origem)
+VALUES
+	('Audi','Alemanha'),
+	('Ferrari','Italia'),
+	('Mazda','Japão'),
+	('BUILD','China'),
+	('BMW','Alemanha');
+    
+INSERT INTO inventario (modelo, transmissao, motor, combustivel, marcas_id)
+VALUES
+	('BMW 218','Automatico','2.0','Gasolina','5'),
+	('TT','Manual','3.0','Gasolina','1'),
+	('296 GTB/GTS','Manual','2.5','Gasolina','2'),
+	('BYD','Automatico','1.4','Elétrico','4'),
+	('RX7','Manual','2.2','Diesel','3');
+	
